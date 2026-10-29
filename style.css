@@ -1,0 +1,44 @@
+:root {
+  color-scheme: dark;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #080a10;
+  color: #f0f1f6;
+  --accent: #00e7ee;
+  --muted: #adb2c4;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; line-height: 1.7; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 5px; }
+.container { width: min(1080px, 90%); margin: auto; }
+.nav { display: flex; gap: 24px; align-items: center; padding: 24px 0; }
+.brand { margin-right: auto; color: #fff; font-weight: 800; }
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 48px; align-items: center; padding: 55px 0; }
+.badge { display: inline-block; color: var(--accent); border: 1px solid #175257; border-radius: 24px; padding: 5px 14px; font: 12px monospace; }
+h1 { margin: 18px 0; font-size: clamp(42px, 7vw, 78px); line-height: 1.05; letter-spacing: -3px; }
+h1 span { background: linear-gradient(100deg, #00e7ee, #6093ff); background-clip: text; -webkit-background-clip: text; color: transparent; }
+.role { font-size: 20px; color: #c0c4d3; }
+.roll { color: var(--accent); font-weight: 600; }
+.intro { color: var(--muted); max-width: 540px; }
+.button { display: inline-block; background: var(--accent); color: #081015; padding: 11px 22px; border-radius: 7px; font-weight: 700; margin-top: 12px; }
+.code-card, .card { background: #10131c; border: 1px solid #292d3b; border-radius: 14px; }
+.code-card { overflow: hidden; }
+.window-bar { margin: 0; padding: 14px 22px; border-bottom: 1px solid #292d3b; color: var(--muted); font: 12px monospace; }
+pre { padding: 18px 22px; margin: 0; color: #77d9bf; font: 13px/1.9 monospace; white-space: pre-wrap; }
+.card { margin: 0 0 24px; padding: 30px; }
+.eyebrow { color: var(--accent); font: 12px monospace; letter-spacing: 2px; }
+h2 { margin-top: 0; font-size: 26px; }
+.card p, .card li { color: var(--muted); }
+.card strong { color: #f0f1f6; }
+li { margin-bottom: 10px; }
+footer { text-align: center; color: var(--muted); padding: 15px 20px 30px; font-size: 13px; }
+
+@media (max-width: 700px) {
+  .nav { flex-wrap: wrap; gap: 16px; font-size: 14px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; padding: 30px 0; }
+  .card { padding: 22px; }
+  h2 { font-size: 23px; }
+}
